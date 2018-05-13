@@ -10,13 +10,13 @@ Domain Path: lang
 Version: 1.0
 */
 
-define('GCS_PATH', str_replace('/','',plugin_dir_path( __FILE__ )) );
+define('GCS_PATH',  plugin_dir_path( __FILE__ )  );
 define('GCS_URL', plugin_dir_url( __FILE__ ) );
 define('GCS_BASE', plugin_basename(__FILE__) );
 
 //echo GCS_PATH.'\admin.php';
 
-require(GCS_PATH.'\admin.php');
+require(GCS_PATH.'admin.php');
 
 add_action('admin_footer', 'google_charts_init');
 
@@ -25,7 +25,7 @@ function google_charts_init(){
 	echo "<script>var GoogleCharts = {GCS_PATH: '".GCS_PATH."',GCS_URL: '".GCS_URL."',GCS_BASE: '".GCS_BASE."'}</script>";
 }
 
-function generateRandomString($length = 10) {
+function WPGC_generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
@@ -38,7 +38,7 @@ function generateRandomString($length = 10) {
 
 class google_chart{
 	function the_create_chart($title, $url, $chartType, $filters, $verticalTitle, $horizontalTitle){
-		$output = "<div id='".generateRandomString(4)."' class='google-chart-entity' data-table-id='".$url."' data-visualization-type='".$chartType."' data-title='".$title."' data-v-title='".$verticalTitle."' data-h-title='".$horizontalTitle."' data-filters-cols='".$filters."'><div class='chart' ></div></div>";
+		$output = "<div id='".WPGC_generateRandomString(4)."' class='google-chart-entity' data-table-id='".$url."' data-visualization-type='".$chartType."' data-title='".$title."' data-v-title='".$verticalTitle."' data-h-title='".$horizontalTitle."' data-filters-cols='".$filters."'><div class='chart' ></div></div>";
 		return $output;
 	}
 

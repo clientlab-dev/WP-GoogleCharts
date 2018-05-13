@@ -11,8 +11,8 @@ function ex_add_my_tc_button() {
     	return;
     }
     // проверяем тип поста
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
-        return;
+  //  if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+      //  return;
     // проверяем что WYSIWYG включен
     if ( get_user_option('rich_editing') == 'true') {
         add_filter("mce_external_plugins", "ex_add_tinymce_plugin");
