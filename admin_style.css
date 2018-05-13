@@ -1,0 +1,52 @@
+* {
+	font-family: Arial;
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
+}
+body {
+	padding: 15px;
+	padding-bottom: 30px;
+}
+
+h1{
+	font-size: 1.8rem;
+	padding: 0 11px;
+	color: #525252;
+	margin: 1rem 0 0.5rem 0;
+}
+input, select, button{
+	display: block;
+	height: 36px;
+	padding: 3px 8px;
+	margin-top: 5px;
+	width: 100%;
+}
+
+label {
+	font-size: 14px;
+}
+
+label i{
+	color:red;
+}
+table {
+	width: 100%;
+}
+
+td {
+	padding: 10px;
+}
+
+.descr {
+	font-size: 13px;
+	color: #666;
+	line-height:1.3;
+}
+
+.url {
+	color: #2f652f;
+display: inline-block;
+padding: 3px 4px;
+background: rgba(255, 245, 212, 0.88);
+}
